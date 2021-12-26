@@ -9,6 +9,12 @@
 #### 在线示例
 [http://akof1314.github.io/Wiz.Editor.md/](http://akof1314.github.io/Wiz.Editor.md/)
 
+官网:
+https://pandao.github.io/editor.md/examples/index.html
+
+参考链接:
+https://www.cnblogs.com/liujiaxian/p/6336841.html
+
 #### 主要特性
 
 - 多种样式主题
