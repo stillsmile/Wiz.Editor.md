@@ -26,9 +26,12 @@
     window.$docsify = {
         name: 'Java工程师成神之路',
         repo: 'https://github.com/hollischuang/toBeTopJavaer',
-          loadSidebar: true,
+        alias: {
+            '/.*/_sidebar.md': '/_sidebar.md',
+        },
+        loadSidebar: true,
         subMaxLevel: 3,
-        sidebarDisplayLevel : 3 ,  // 设置侧边栏显示级别
+        sidebarDisplayLevel: 3,  // 设置侧边栏显示级别
         autoHeader: true,
         search: {
             paths: 'auto',
@@ -46,15 +49,31 @@
             previousText: '上一章',
             nextText: '下一章',
         },
+        count:{
+            countable:true,
+            fontsize:'0.9em',
+            color:'rgb(90,90,90)',
+            language:'chinese'
+        },
         coverpage: true
     }
 </script>
+
+<!-- TODO 参照此处进行设置--插件-->
+<!--https://blog.csdn.net/weixin_39860849/article/details/110797836-->
+
+
 <script src="./js/lib/docsify.min.js"></script>
 <!--代码块复制插件-->
 <script src="//unpkg.com/docsify-copy-code"></script>
 
 <!--搜索插件-->
 <script src="./js/plugins/search.min.js"></script>
+<!--<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>-->
+
+<!--字数统计-->
+<script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+
 <!--语法高亮插件-->
 <script src="./js/prism-java.min.js"></script>
 
@@ -67,9 +86,17 @@
 <!-- 图片缩放插件 -->
 <script src="./js/zoom-image.min.js"></script>
 
-<!--侧边栏收缩组件-->
-<!--<script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>-->
-<script src="./js/docsify-sidebar-collapse.js"></script>
+<!--文件夹样式-->
+<!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" />-->
+<!--箭头样式-->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+
+
+<!--侧边栏引用js源码地址-->
+<!--https://github.com/stillsmile/docsify-sidebar-collapse/blob/master/src/sidebar-pin-plugin.js-->
+<!--<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>-->
+<!-- plugins 侧边栏收缩组件-->
+<script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 
 
 <!--<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
