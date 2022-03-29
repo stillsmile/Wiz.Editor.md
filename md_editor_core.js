@@ -441,8 +441,23 @@ $(function () {
         //     doc = arrResult[0];
         // };
 
+        let data = {
+            name: "hanmeimei",
+            age: 88
+        }
+        var content = JSON.stringify(data);
+        var blob = new Blob([doc], {type: "text/plain;charset=utf-8"});
+        //saveAs(blob, "D://githubworkspace//Wiz.Editor.md2.8//index_files//save.md");
 
-        $.set('index_files/test.md', doc);
+        let newfile = new ActiveXObject("Scripting.FileSystemObject");
+        // let openFile = newfile.OpenTextFile("C:\\testfile.txt", 1, true);
+
+        var editFile = newfile.CreateTextFile("D:\\githubworkspace\\Wiz.Editor.md2.8\\index_files\\save.md", true);
+        editFile.WriteLine('steadyAdvice');
+        editFile.WriteLine(doc);
+        editFile.Close();
+
+        //$.set('index_files/test.md', doc);
         // doc = $('<div/>').text(doc).html();
         // doc = doc.replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');   // 替换制表符
         // doc = doc.replace(/\n|\r|(\r\n)|(\u0085)|(\u2028)|(\u2029)/g, "<br/>").replace(/ /g, '\u00a0');
